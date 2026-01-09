@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-09T12:07:15 EST" name="Default suite" finished-at="2026-01-09T12:07:34 EST" duration-ms="19240">
+  <suite started-at="2026-01-09T12:27:14 EST" name="Default suite" finished-at="2026-01-09T12:27:44 EST" duration-ms="30744">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-01-09T12:07:15 EST" name="Default test" finished-at="2026-01-09T12:07:34 EST" duration-ms="19240">
+    <test started-at="2026-01-09T12:27:14 EST" name="Default test" finished-at="2026-01-09T12:27:44 EST" duration-ms="30744">
       <class name="com.example.runner.CucumberRunnerTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:07:15 EST" name="setUpClass" finished-at="2026-01-09T12:07:15 EST" duration-ms="646" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:27:14 EST" name="setUpClass" finished-at="2026-01-09T12:27:14 EST" duration-ms="563" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3d904e9c]]>
+                <![CDATA[org.testng.TestRunner@d277579]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:07:15 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-09T12:07:33 EST" duration-ms="17224" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:27:14 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-09T12:27:43 EST" duration-ms="29109" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,49 +34,33 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[element click intercepted: Element <a data-type="backgroundLink" aria-hidden="true" class="a-link-normal _c2Itd_link_2AMAT _c2Itd_backgroundLink_2-sSH" tabindex="-1" href="https://aax-us-east-retail-direct.amazon.com/x/c/JAdqcFAiZnGXswKAfoAENTkAAAGbo7o8BAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBjMvvM/clv1_CEuOPUxokZA0iHrVW6J84g3bZFNmY-ATkYdZyi2S28BN139li3etL_018nHz9hvWjq0yzpNb3XTPsunP6WYceWI5Lz6sPej2GHMAdGh2YR6uNb8lmgYOLZEdHEep-YamXJOUI0W78tANGk5hgFv_ak5TLFFOGshzBElqUqEnHhGU36Ta0Ek8SAz5MJbld7QzBH9acdHMzpkFUDVhJ9oQXuEFlsWsnsI6KjDhFKorgxcWp4FvlLz2S1sKgEji6npOAE_zFP7W4zho-hUrANRvXRGwenKzslPpBOrh0afsFq4FBhiD8byFyCnOZALHHJaq9-sczsxsTvDakJrgDNurBZxJ-dpzBzsNqpBH4-s4O75j5EVFMmec0z-R5rIBU0KHcCRtq0SmgkUgq2nSGrDWf0t6ALHEs8pDZfIZM3hCrgUANL9bkxVaLztUwaVWXQoMHaeUao3xp-WQHS8cbA2SvJ4-Q2qPp1y_TBdOTLAmp_2qFGp75LHc-AHMbHhxNK2CqqpS0ANBBJckvBiPqG6J_QDbShZBIlAiKhHYaBTXJr2tTyesYBV04HgFDGfLZXTbcOg1kdlQdgfD0O5fltwGIA3fMTRdiCxa_eAfgriSoXM6mpyp-PsPXWjG5SaBd6WbC0ktbP4TeDxy1ehgCJ8RiQk2_oPxAhRORkQBn8dci74pAEsTUA_4pH0zoRbcbuVqiyQj8QJX1foW1rcFHVazIH0h7ZPxC_zH36qZFnE1QST_qUnBaO9h5it66ugCa8OiqYF-ExyZ93TMqhrRAV7uASt-rzfJI2B1rtFpW_0sfiii21obB8h0gApDrJyZc3-vLuOmdTNZ2i3KpNZZX_EVnJ6mg08cuu6HO8aTrsWCjnOPhnr713UWzg_s1FSWmTzwjd15p_UHyxHrPP4dKt8XG_C21-m_rwJXCSooAQLmsxLZiDJNMjQ7b3Q1AibNyDqAs2vnU_DU7q-ygOTu5wqqVqtIJ9ePWpr513mRcC1GauAITEpaSGlGbqj7lCnsJn0teQmb_r16xzxsJZsN26Og6xhBmCpEJvy_nVxq6oRQqgV2ex-ZfJCjFDLGcbJTDclNMEy9d5_RERQFP6CeYZKbr8fEQynZ_4FJcJULCylJOYbCWWuRKcx7rmZlAp6rn-rZ5_QAQaK_kRIFGPRuo3MdUHoHRMHCPH7WF9QPu6Chr4Gy1w-t-XLq3YY_iiRGQZAfKiTvEFbSglC8XCclpHTANfaJ4uNYmap7yhis7bJmMVvcFFM9R3-T9kXs1CAaB7bxR4oloP6TOkvDY7loBKYMmUIL3qtA1p2J7g6vnEiSJ-SpS91meeve9P0B8B2H448YEpVjcQ-FzHj31-chDkcmxab35_0g6GBrCe9ODNpNuaYViGSlOQ-5guiRBFyTbrxAFiXUWXSseBfDCyYsfarkXqi3uiSuFUBMnfgo-__Lq1x_VgRY87wTNuh_Pz3CCR-s3gBaNHmro4mtvGn0PQrVdWKR2A3uZf4P46Ij5dAX5E0mkFXEQXqaAmpQhYs_vYuypV-udCxnaMgyC4rsX_wkDm_MgsecIFOzC0qQJJQqtPrO09ybu7SUWodfUeQ8r_RIe_3uO03R2aXWbfPeEmEMa3Vl_Nbu9ZoZ7rvdwnnmkfm9f1zJMDmpoUxs41Y_WIaacAmbOU_WwrZNbWy9pxhM_vYKZBjEaUwBPItql-YdS8CoG4Uv4ansSlIWwvuHju61_cYteYKJsSoHhkuom4gXCSXEmihkkna5h6VbAQ2Xm1KApbHRncNRVKkIwHHdPoMupKoTwDSZoZN-DN9SIK9g5GwKNvCt_XL0V_GNGDSO_7aaCZu33Lhu_v4VItytgaNzlCN7evB8Aq4Mhef2OXrYLuu47bpQXNmqdO1AYC9BgiRfzPrpCo3phH52apW75vE2q_P5SxBzm_OS_yRydSLbGcudkSBS3tEKVJ_mvo0ZqXgwFxNL54viU5h8_QmoLhxyp4_idVsZDsaz5Z-NaISBKETlgc9gEWahS50SEF3vR9O4FQsrYOamU8TmhBPP9icpaLSE3qHFN_KKcoGDGSTvxEZYAE_drYbtgmSR3lcUncgE8-tMNB9TOahuhjB7SNbNoixAYlAmTMn-Jm2XEDL6QCMjC5S91M7GKrkTzE0TUvCuBt8pDHLJb6w6xIMx4kyrTCV12G5kDV4HVxq-Ow_qpwmgLqv-6QoeklHGQbBdXb8nK63VNeqSP_JaLKx0feBHhd7OJ6_Ts77tjqcAcb1plKewxeJ7hCkHo6jSI3pYx-MXY4QRcB_p8qL0etDoiqdJO0m7a5KKlVfcujpEI6A2U7zHQaLX1xZ1W6ChAUM0QC3RE5Bqmzb8Vp7Sy4DRnLlvbg/https://www.amazon.com/dp/B084VJ55T6/?_encoding=UTF8&amp;_encoding=UTF8&amp;pd_rd_i=B084VJ55T6&amp;ref_=sxts_sparkle_sbv&amp;ref_=sbx_be_s_sparkle_ssd_bkg&amp;qid=1767978449&amp;pd_rd_w=iutmc&amp;content-id=amzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d%3Aamzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&amp;pf_rd_p=9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&amp;pf_rd_r=0727TPBK0K07KQ49AHFF&amp;pd_rd_wg=cCBqf&amp;pd_rd_r=d84e0060-931f-480d-b1b4-aabaf3738cc3"></a> is not clickable at point (1104, 317). Other element would receive the click: <img alt="Wantschun Womens Wide Leg Pajama Pants Satin Silk Casual Loose Elastic Waist Lounge Pants Pj Bottoms Black;S" src="https://m.media-amazon.com/images/I/31dmTID9zgL._AC_SR250,250_QL65_.jpg" data-image-latency="" data-type="productImage" class="_c2Itd_image_pQREQ">
-  (Session info: chrome=143.0.7499.170)
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.id: add-to-cart-button (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8b961cf5bf47eabd87f7e3fee288c5d, clickElement {id=f.B74825CEF231956E1C4DAEA752135184.d.7E0FA435F6BD743C73CF7D06BC69F7CE.e.198}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\peter\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49738}, goog:processID: 5456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49738/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (a8b961cf5bf47eabd87f7e3fee288c5d)] -> xpath: (//a[contains(@class,'a-link-normal') and contains(@href,'/dp/')])[1]]
-Session ID: a8b961cf5bf47eabd87f7e3fee288c5d]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\peter\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56414}, goog:processID: 9656, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56414/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9518d4a9e4f350673bc861d4fd733ddb]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a data-type="backgroundLink" aria-hidden="true" class="a-link-normal _c2Itd_link_2AMAT _c2Itd_backgroundLink_2-sSH" tabindex="-1" href="https://aax-us-east-retail-direct.amazon.com/x/c/JAdqcFAiZnGXswKAfoAENTkAAAGbo7o8BAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBjMvvM/clv1_CEuOPUxokZA0iHrVW6J84g3bZFNmY-ATkYdZyi2S28BN139li3etL_018nHz9hvWjq0yzpNb3XTPsunP6WYceWI5Lz6sPej2GHMAdGh2YR6uNb8lmgYOLZEdHEep-YamXJOUI0W78tANGk5hgFv_ak5TLFFOGshzBElqUqEnHhGU36Ta0Ek8SAz5MJbld7QzBH9acdHMzpkFUDVhJ9oQXuEFlsWsnsI6KjDhFKorgxcWp4FvlLz2S1sKgEji6npOAE_zFP7W4zho-hUrANRvXRGwenKzslPpBOrh0afsFq4FBhiD8byFyCnOZALHHJaq9-sczsxsTvDakJrgDNurBZxJ-dpzBzsNqpBH4-s4O75j5EVFMmec0z-R5rIBU0KHcCRtq0SmgkUgq2nSGrDWf0t6ALHEs8pDZfIZM3hCrgUANL9bkxVaLztUwaVWXQoMHaeUao3xp-WQHS8cbA2SvJ4-Q2qPp1y_TBdOTLAmp_2qFGp75LHc-AHMbHhxNK2CqqpS0ANBBJckvBiPqG6J_QDbShZBIlAiKhHYaBTXJr2tTyesYBV04HgFDGfLZXTbcOg1kdlQdgfD0O5fltwGIA3fMTRdiCxa_eAfgriSoXM6mpyp-PsPXWjG5SaBd6WbC0ktbP4TeDxy1ehgCJ8RiQk2_oPxAhRORkQBn8dci74pAEsTUA_4pH0zoRbcbuVqiyQj8QJX1foW1rcFHVazIH0h7ZPxC_zH36qZFnE1QST_qUnBaO9h5it66ugCa8OiqYF-ExyZ93TMqhrRAV7uASt-rzfJI2B1rtFpW_0sfiii21obB8h0gApDrJyZc3-vLuOmdTNZ2i3KpNZZX_EVnJ6mg08cuu6HO8aTrsWCjnOPhnr713UWzg_s1FSWmTzwjd15p_UHyxHrPP4dKt8XG_C21-m_rwJXCSooAQLmsxLZiDJNMjQ7b3Q1AibNyDqAs2vnU_DU7q-ygOTu5wqqVqtIJ9ePWpr513mRcC1GauAITEpaSGlGbqj7lCnsJn0teQmb_r16xzxsJZsN26Og6xhBmCpEJvy_nVxq6oRQqgV2ex-ZfJCjFDLGcbJTDclNMEy9d5_RERQFP6CeYZKbr8fEQynZ_4FJcJULCylJOYbCWWuRKcx7rmZlAp6rn-rZ5_QAQaK_kRIFGPRuo3MdUHoHRMHCPH7WF9QPu6Chr4Gy1w-t-XLq3YY_iiRGQZAfKiTvEFbSglC8XCclpHTANfaJ4uNYmap7yhis7bJmMVvcFFM9R3-T9kXs1CAaB7bxR4oloP6TOkvDY7loBKYMmUIL3qtA1p2J7g6vnEiSJ-SpS91meeve9P0B8B2H448YEpVjcQ-FzHj31-chDkcmxab35_0g6GBrCe9ODNpNuaYViGSlOQ-5guiRBFyTbrxAFiXUWXSseBfDCyYsfarkXqi3uiSuFUBMnfgo-__Lq1x_VgRY87wTNuh_Pz3CCR-s3gBaNHmro4mtvGn0PQrVdWKR2A3uZf4P46Ij5dAX5E0mkFXEQXqaAmpQhYs_vYuypV-udCxnaMgyC4rsX_wkDm_MgsecIFOzC0qQJJQqtPrO09ybu7SUWodfUeQ8r_RIe_3uO03R2aXWbfPeEmEMa3Vl_Nbu9ZoZ7rvdwnnmkfm9f1zJMDmpoUxs41Y_WIaacAmbOU_WwrZNbWy9pxhM_vYKZBjEaUwBPItql-YdS8CoG4Uv4ansSlIWwvuHju61_cYteYKJsSoHhkuom4gXCSXEmihkkna5h6VbAQ2Xm1KApbHRncNRVKkIwHHdPoMupKoTwDSZoZN-DN9SIK9g5GwKNvCt_XL0V_GNGDSO_7aaCZu33Lhu_v4VItytgaNzlCN7evB8Aq4Mhef2OXrYLuu47bpQXNmqdO1AYC9BgiRfzPrpCo3phH52apW75vE2q_P5SxBzm_OS_yRydSLbGcudkSBS3tEKVJ_mvo0ZqXgwFxNL54viU5h8_QmoLhxyp4_idVsZDsaz5Z-NaISBKETlgc9gEWahS50SEF3vR9O4FQsrYOamU8TmhBPP9icpaLSE3qHFN_KKcoGDGSTvxEZYAE_drYbtgmSR3lcUncgE8-tMNB9TOahuhjB7SNbNoixAYlAmTMn-Jm2XEDL6QCMjC5S91M7GKrkTzE0TUvCuBt8pDHLJb6w6xIMx4kyrTCV12G5kDV4HVxq-Ow_qpwmgLqv-6QoeklHGQbBdXb8nK63VNeqSP_JaLKx0feBHhd7OJ6_Ts77tjqcAcb1plKewxeJ7hCkHo6jSI3pYx-MXY4QRcB_p8qL0etDoiqdJO0m7a5KKlVfcujpEI6A2U7zHQaLX1xZ1W6ChAUM0QC3RE5Bqmzb8Vp7Sy4DRnLlvbg/https://www.amazon.com/dp/B084VJ55T6/?_encoding=UTF8&amp;_encoding=UTF8&amp;pd_rd_i=B084VJ55T6&amp;ref_=sxts_sparkle_sbv&amp;ref_=sbx_be_s_sparkle_ssd_bkg&amp;qid=1767978449&amp;pd_rd_w=iutmc&amp;content-id=amzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d%3Aamzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&amp;pf_rd_p=9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&amp;pf_rd_r=0727TPBK0K07KQ49AHFF&amp;pd_rd_wg=cCBqf&amp;pd_rd_r=d84e0060-931f-480d-b1b4-aabaf3738cc3"></a> is not clickable at point (1104, 317). Other element would receive the click: <img alt="Wantschun Womens Wide Leg Pajama Pants Satin Silk Casual Loose Elastic Waist Lounge Pants Pj Bottoms Black;S" src="https://m.media-amazon.com/images/I/31dmTID9zgL._AC_SR250,250_QL65_.jpg" data-image-latency="" data-type="productImage" class="_c2Itd_image_pQREQ">
-  (Session info: chrome=143.0.7499.170)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: add-to-cart-button (tried for 15 second(s) with 500 milliseconds interval)
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a8b961cf5bf47eabd87f7e3fee288c5d, clickElement {id=f.B74825CEF231956E1C4DAEA752135184.d.7E0FA435F6BD743C73CF7D06BC69F7CE.e.198}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\peter\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49738}, goog:processID: 5456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49738/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (a8b961cf5bf47eabd87f7e3fee288c5d)] -> xpath: (//a[contains(@class,'a-link-normal') and contains(@href,'/dp/')])[1]]
-Session ID: a8b961cf5bf47eabd87f7e3fee288c5d
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at com.example.definitions.AmazonPageDefinitions.select_first_product(AmazonPageDefinitions.java:61)
-at ✽.User selects the first product from results(file:///C:/GitHub-repositories/testng-cucumber-demonstration/Cucumber_TestNG_Demo_Amazon_Screenshots_3_Slash_Underscore_1/src/test/resources/features/AmazonCart.feature:7)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\peter\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56414}, goog:processID: 9656, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56414/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9518d4a9e4f350673bc861d4fd733ddb
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.example.definitions.AmazonPageDefinitions.add_to_cart(AmazonPageDefinitions.java:81)
+at ✽.User adds the product to the cart(file:///C:/GitHub-repositories/testng-cucumber-demonstration/Cucumber_TestNG_Demo_Amazon_Screenshots_3_Slash_Underscore_1/src/test/resources/features/AmazonCart.feature:8)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:07:33 EST" name="tearDownClass" finished-at="2026-01-09T12:07:34 EST" duration-ms="1288" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:27:43 EST" name="tearDownClass" finished-at="2026-01-09T12:27:44 EST" duration-ms="1024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

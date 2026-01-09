@@ -66,13 +66,23 @@ public class AmazonPageDefinitions {
     @When("User selects the first product from results")
     public void select_first_product() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout_seconds));
-        By first_product_xpath = By.xpath("(//a[contains(@class,'a-link-normal') and contains(@href,'/dp/')])[1]");
 
-        WebElement first_link = wait.until(ExpectedConditions.presenceOfElementLocated(first_product_xpath));
+        // This XPath specifically looks for a search result that is NOT a sponsored
+        // 'sparkle' ad
+        // It targets the first organic product link in the search grid
+        By organic_product_xpath = By.xpath(
+                "//div[@data-component-type='s-search-result']" + // Main result container
+                        "[not(.//span[contains(text(),'Sponsored')])]" + // Exclude sponsored labels
+                        "//a[contains(@class,'a-link-normal') and contains(@href,'/dp/')]" // The product link
+        );
 
-        // Use JavascriptExecutor to click even if something is covering the element
-        JavascriptExecutor js_executor = (JavascriptExecutor) driver;
-        js_executor.executeScript("arguments[0].click();", first_link);
+        WebElement first_link = wait.until(ExpectedConditions.elementToBeClickable(organic_product_xpath));
+
+        // Scroll it into view just to be safe before clicking
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", first_link);
+
+        // Use Javascript click to avoid any other potential interceptions
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", first_link);
     }
 
     @When("User adds the product to the cart")
