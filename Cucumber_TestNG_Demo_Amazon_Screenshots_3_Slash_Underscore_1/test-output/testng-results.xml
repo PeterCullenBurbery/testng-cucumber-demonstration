@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-09T12:27:14 EST" name="Default suite" finished-at="2026-01-09T12:27:44 EST" duration-ms="30744">
+  <suite started-at="2026-01-09T12:29:03 EST" name="Default suite" finished-at="2026-01-09T12:29:33 EST" duration-ms="30325">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-01-09T12:27:14 EST" name="Default test" finished-at="2026-01-09T12:27:44 EST" duration-ms="30744">
+    <test started-at="2026-01-09T12:29:03 EST" name="Default test" finished-at="2026-01-09T12:29:33 EST" duration-ms="30325">
       <class name="com.example.runner.CucumberRunnerTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:27:14 EST" name="setUpClass" finished-at="2026-01-09T12:27:14 EST" duration-ms="563" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:29:03 EST" name="setUpClass" finished-at="2026-01-09T12:29:03 EST" duration-ms="547" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@d277579]]>
+                <![CDATA[org.testng.TestRunner@3bbf841e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:27:14 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-09T12:27:43 EST" duration-ms="29109" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:29:03 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-01-09T12:29:29 EST" duration-ms="26160" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,33 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.id: add-to-cart-button (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\peter\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56414}, goog:processID: 9656, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56414/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9518d4a9e4f350673bc861d4fd733ddb]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: add-to-cart-button (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.39.0', revision: '126f156aee'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\peter\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56414}, goog:processID: 9656, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56414/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9518d4a9e4f350673bc861d4fd733ddb
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.example.definitions.AmazonPageDefinitions.add_to_cart(AmazonPageDefinitions.java:81)
-at ✽.User adds the product to the cart(file:///C:/GitHub-repositories/testng-cucumber-demonstration/Cucumber_TestNG_Demo_Amazon_Screenshots_3_Slash_Underscore_1/src/test/resources/features/AmazonCart.feature:8)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:27:43 EST" name="tearDownClass" finished-at="2026-01-09T12:27:44 EST" duration-ms="1024" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.example.runner.CucumberRunnerTests@1189dd52]" started-at="2026-01-09T12:29:29 EST" name="tearDownClass" finished-at="2026-01-09T12:29:33 EST" duration-ms="3573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
