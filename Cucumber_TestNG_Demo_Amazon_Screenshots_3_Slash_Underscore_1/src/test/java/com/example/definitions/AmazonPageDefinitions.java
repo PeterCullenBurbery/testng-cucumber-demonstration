@@ -52,17 +52,6 @@ public class AmazonPageDefinitions {
         driver.findElement(By.id("nav-search-submit-button")).click();
     }
 
-    // @When("User selects the first product from results")
-    // public void select_first_product() {
-    // WebDriverWait wait = new WebDriverWait(driver,
-    // Duration.ofSeconds(timeout_seconds));
-    // By first_product_xpath = By.xpath("(//a[contains(@class,'a-link-normal') and
-    // contains(@href,'/dp/')])[1]");
-    // WebElement first_link =
-    // wait.until(ExpectedConditions.elementToBeClickable(first_product_xpath));
-    // first_link.click();
-    // }
-
     @When("User selects the first product from results")
     public void select_first_product() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout_seconds));
