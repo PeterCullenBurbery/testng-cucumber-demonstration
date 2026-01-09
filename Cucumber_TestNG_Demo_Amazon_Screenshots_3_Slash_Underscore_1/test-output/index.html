@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+              <span class="suite-name border-failed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                    <span>C:\Users\peter\AppData\Local\Temp\testng-eclipse--284017566\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                    <span>1 group</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.example.runner.CucumberRunnerTests" class="method navigator-link" hash-for-method="runScenario(&quot;Search and add item to cart&quot;, &quot;Amazon Shopping Cart&quot;)">runScenario("Search and add item to cart", "Amazon Shopping Cart")</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.example.runner.CucumberRunnerTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Search and add item to cart&quot;, &quot;Amazon Shopping Cart&quot;)">
+                  </a> <!-- runScenario("Search and add item to cart", "Amazon Shopping Cart") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Search and add item to cart","Amazon Shopping Cart")</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a data-type=&quot;backgroundLink&quot; aria-hidden=&quot;true&quot; class=&quot;a-link-normal _c2Itd_link_2AMAT _c2Itd_backgroundLink_2-sSH&quot; tabindex=&quot;-1&quot; href=&quot;https://aax-us-east-retail-direct.amazon.com/x/c/JAdqcFAiZnGXswKAfoAENTkAAAGbo7o8BAEAAAH2AQBvbm9fdHhuX2JpZDQgICBvbm9fdHhuX2ltcDEgICBjMvvM/clv1_CEuOPUxokZA0iHrVW6J84g3bZFNmY-ATkYdZyi2S28BN139li3etL_018nHz9hvWjq0yzpNb3XTPsunP6WYceWI5Lz6sPej2GHMAdGh2YR6uNb8lmgYOLZEdHEep-YamXJOUI0W78tANGk5hgFv_ak5TLFFOGshzBElqUqEnHhGU36Ta0Ek8SAz5MJbld7QzBH9acdHMzpkFUDVhJ9oQXuEFlsWsnsI6KjDhFKorgxcWp4FvlLz2S1sKgEji6npOAE_zFP7W4zho-hUrANRvXRGwenKzslPpBOrh0afsFq4FBhiD8byFyCnOZALHHJaq9-sczsxsTvDakJrgDNurBZxJ-dpzBzsNqpBH4-s4O75j5EVFMmec0z-R5rIBU0KHcCRtq0SmgkUgq2nSGrDWf0t6ALHEs8pDZfIZM3hCrgUANL9bkxVaLztUwaVWXQoMHaeUao3xp-WQHS8cbA2SvJ4-Q2qPp1y_TBdOTLAmp_2qFGp75LHc-AHMbHhxNK2CqqpS0ANBBJckvBiPqG6J_QDbShZBIlAiKhHYaBTXJr2tTyesYBV04HgFDGfLZXTbcOg1kdlQdgfD0O5fltwGIA3fMTRdiCxa_eAfgriSoXM6mpyp-PsPXWjG5SaBd6WbC0ktbP4TeDxy1ehgCJ8RiQk2_oPxAhRORkQBn8dci74pAEsTUA_4pH0zoRbcbuVqiyQj8QJX1foW1rcFHVazIH0h7ZPxC_zH36qZFnE1QST_qUnBaO9h5it66ugCa8OiqYF-ExyZ93TMqhrRAV7uASt-rzfJI2B1rtFpW_0sfiii21obB8h0gApDrJyZc3-vLuOmdTNZ2i3KpNZZX_EVnJ6mg08cuu6HO8aTrsWCjnOPhnr713UWzg_s1FSWmTzwjd15p_UHyxHrPP4dKt8XG_C21-m_rwJXCSooAQLmsxLZiDJNMjQ7b3Q1AibNyDqAs2vnU_DU7q-ygOTu5wqqVqtIJ9ePWpr513mRcC1GauAITEpaSGlGbqj7lCnsJn0teQmb_r16xzxsJZsN26Og6xhBmCpEJvy_nVxq6oRQqgV2ex-ZfJCjFDLGcbJTDclNMEy9d5_RERQFP6CeYZKbr8fEQynZ_4FJcJULCylJOYbCWWuRKcx7rmZlAp6rn-rZ5_QAQaK_kRIFGPRuo3MdUHoHRMHCPH7WF9QPu6Chr4Gy1w-t-XLq3YY_iiRGQZAfKiTvEFbSglC8XCclpHTANfaJ4uNYmap7yhis7bJmMVvcFFM9R3-T9kXs1CAaB7bxR4oloP6TOkvDY7loBKYMmUIL3qtA1p2J7g6vnEiSJ-SpS91meeve9P0B8B2H448YEpVjcQ-FzHj31-chDkcmxab35_0g6GBrCe9ODNpNuaYViGSlOQ-5guiRBFyTbrxAFiXUWXSseBfDCyYsfarkXqi3uiSuFUBMnfgo-__Lq1x_VgRY87wTNuh_Pz3CCR-s3gBaNHmro4mtvGn0PQrVdWKR2A3uZf4P46Ij5dAX5E0mkFXEQXqaAmpQhYs_vYuypV-udCxnaMgyC4rsX_wkDm_MgsecIFOzC0qQJJQqtPrO09ybu7SUWodfUeQ8r_RIe_3uO03R2aXWbfPeEmEMa3Vl_Nbu9ZoZ7rvdwnnmkfm9f1zJMDmpoUxs41Y_WIaacAmbOU_WwrZNbWy9pxhM_vYKZBjEaUwBPItql-YdS8CoG4Uv4ansSlIWwvuHju61_cYteYKJsSoHhkuom4gXCSXEmihkkna5h6VbAQ2Xm1KApbHRncNRVKkIwHHdPoMupKoTwDSZoZN-DN9SIK9g5GwKNvCt_XL0V_GNGDSO_7aaCZu33Lhu_v4VItytgaNzlCN7evB8Aq4Mhef2OXrYLuu47bpQXNmqdO1AYC9BgiRfzPrpCo3phH52apW75vE2q_P5SxBzm_OS_yRydSLbGcudkSBS3tEKVJ_mvo0ZqXgwFxNL54viU5h8_QmoLhxyp4_idVsZDsaz5Z-NaISBKETlgc9gEWahS50SEF3vR9O4FQsrYOamU8TmhBPP9icpaLSE3qHFN_KKcoGDGSTvxEZYAE_drYbtgmSR3lcUncgE8-tMNB9TOahuhjB7SNbNoixAYlAmTMn-Jm2XEDL6QCMjC5S91M7GKrkTzE0TUvCuBt8pDHLJb6w6xIMx4kyrTCV12G5kDV4HVxq-Ow_qpwmgLqv-6QoeklHGQbBdXb8nK63VNeqSP_JaLKx0feBHhd7OJ6_Ts77tjqcAcb1plKewxeJ7hCkHo6jSI3pYx-MXY4QRcB_p8qL0etDoiqdJO0m7a5KKlVfcujpEI6A2U7zHQaLX1xZ1W6ChAUM0QC3RE5Bqmzb8Vp7Sy4DRnLlvbg/https://www.amazon.com/dp/B084VJ55T6/?_encoding=UTF8&amp;amp;_encoding=UTF8&amp;amp;pd_rd_i=B084VJ55T6&amp;amp;ref_=sxts_sparkle_sbv&amp;amp;ref_=sbx_be_s_sparkle_ssd_bkg&amp;amp;qid=1767978449&amp;amp;pd_rd_w=iutmc&amp;amp;content-id=amzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d%3Aamzn1.sym.9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&amp;amp;pf_rd_p=9f2b2b9e-47e9-4764-a4dc-2be2f6fca36d&amp;amp;pf_rd_r=0727TPBK0K07KQ49AHFF&amp;amp;pd_rd_wg=cCBqf&amp;amp;pd_rd_r=d84e0060-931f-480d-b1b4-aabaf3738cc3&quot;&gt;&lt;/a&gt; is not clickable at point (1104, 317). Other element would receive the click: &lt;img alt=&quot;Wantschun Womens Wide Leg Pajama Pants Satin Silk Casual Loose Elastic Waist Lounge Pants Pj Bottoms Black;S&quot; src=&quot;https://m.media-amazon.com/images/I/31dmTID9zgL._AC_SR250,250_QL65_.jpg&quot; data-image-latency=&quot;&quot; data-type=&quot;productImage&quot; class=&quot;_c2Itd_image_pQREQ&quot;&gt;
+  (Session info: chrome=143.0.7499.170)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a8b961cf5bf47eabd87f7e3fee288c5d, clickElement {id=f.B74825CEF231956E1C4DAEA752135184.d.7E0FA435F6BD743C73CF7D06BC69F7CE.e.198}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.170, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\peter\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49738}, goog:processID: 5456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49738/devtoo..., se:cdpVersion: 143.0.7499.170, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a8b961cf5bf47eabd87f7e3fee288c5d)] -&gt; xpath: (//a[contains(@class,&apos;a-link-normal&apos;) and contains(@href,&apos;/dp/&apos;)])[1]]
+Session ID: a8b961cf5bf47eabd87f7e3fee288c5d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.example.definitions.AmazonPageDefinitions.select_first_product(AmazonPageDefinitions.java:61)
+	at ✽.User selects the first product from results(file:///C:/GitHub-repositories/testng-cucumber-demonstration/Cucumber_TestNG_Demo_Amazon_Screenshots_3_Slash_Underscore_1/src/test/resources/features/AmazonCart.feature:7)
+
+</div> <!-- stack-trace -->
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\peter\AppData\Local\Temp\testng-eclipse--284017566\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.example.runner.CucumberRunnerTests&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">cucumber</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">runScenario</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'runScenario')
+data.setCell(0, 2, 'com.example.runner.CucumberRunnerTests')
+data.setCell(0, 3, 17224);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.example.runner.CucumberRunnerTests</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass(org.testng.TestRunner@3d904e9c)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">runScenario("Search and add item to cart", "Amazon Shopping Cart")</span>
+                <span class="method-start">660 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDownClass</span>
+                <span class="method-start">17904 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
