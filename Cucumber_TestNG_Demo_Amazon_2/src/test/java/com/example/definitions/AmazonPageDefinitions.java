@@ -56,25 +56,22 @@ public class AmazonPageDefinitions {
     public void select_first_product() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout_seconds));
 
-        // We target the 'search-results' container specifically to skip top-page
-        // 'Sparkle' ads.
-        // We also exclude any div that has the 'Ad' or 'Sponsored' label.
-        By organic_product_locator = By.xpath(
-                "//div[@data-component-type='s-search-result']" +
-                        "[not(.//span[contains(text(),'Sponsored')])]" +
-                        "//a[contains(@class,'a-link-normal') and contains(@href,'/dp/')]");
+        // This XPath specifically looks for a search result that is NOT a sponsored
+        // 'sparkle' ad
+        // It targets the first organic product link in the search grid
+        By organic_product_xpath = By.xpath(
+                "//div[@data-component-type='s-search-result']" + // Main result container
+                        "[not(.//span[contains(text(),'Sponsored')])]" + // Exclude sponsored labels
+                        "//a[contains(@class,'a-link-normal') and contains(@href,'/dp/')]" // The product link
+        );
 
-        // 1. Wait until the organic product is present
-        WebElement first_organic_link = wait.until(
-                ExpectedConditions.elementToBeClickable(organic_product_locator));
+        WebElement first_link = wait.until(ExpectedConditions.elementToBeClickable(organic_product_xpath));
 
-        // 2. Scroll it into the middle of the screen so ads don't cover it
-        ((JavascriptExecutor) driver).executeScript(
-                "arguments[0].scrollIntoView({block: 'center'});", first_organic_link);
+        // Scroll it into view just to be safe before clicking
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", first_link);
 
-        // 3. Click it via JavaScript to bypass any invisible 'Sparkle' overlays
-        ((JavascriptExecutor) driver).executeScript(
-                "arguments[0].click();", first_organic_link);
+        // Use Javascript click to avoid any other potential interceptions
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", first_link);
     }
 
     @When("User adds the product to the cart")
