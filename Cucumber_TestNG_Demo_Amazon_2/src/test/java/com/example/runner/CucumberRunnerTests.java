@@ -8,7 +8,6 @@ import io.cucumber.testng.CucumberOptions;
     glue = {"com.example.definitions"},
     plugin = {
         "pretty", 
-        "html:target/cucumber-reports.html",
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
     }
 )
