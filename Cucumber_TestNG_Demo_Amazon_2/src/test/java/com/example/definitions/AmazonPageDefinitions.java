@@ -1,6 +1,7 @@
 package com.example.definitions;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,6 +14,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import java.time.Duration;
 
@@ -108,13 +111,11 @@ public class AmazonPageDefinitions {
 
     @AfterStep
     public void add_screenshot(Scenario scenario) {
+        // validate if driver is initialized before taking screenshot
         if (driver != null) {
-            // Just take the bytes
             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-
-            // Attach without the dynamic line number in the name
-            // This allows the adapter to handle step-association automatically
-            scenario.attach(screenshot, "image/png", "step-screenshot");
+            // Attach the screenshot to the Cucumber report
+            scenario.attach(screenshot, "image/png", "image_at_step_" + scenario.getLine());
         }
     }
 }

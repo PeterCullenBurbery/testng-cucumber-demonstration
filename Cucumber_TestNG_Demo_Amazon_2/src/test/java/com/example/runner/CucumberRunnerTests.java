@@ -6,11 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
     features = {"src/test/resources/features/AmazonCart.feature"},
     glue = {"com.example.definitions"},
-    plugin = {
-        "pretty", 
-        "html:target/cucumber-reports.html",
-        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
-    }
+    plugin = {"pretty", "html:target/cucumber-reports.html"}
 )
 public class CucumberRunnerTests extends AbstractTestNGCucumberTests {
 }
