@@ -11,6 +11,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 import java.time.Duration;
 
@@ -102,5 +106,15 @@ public class AmazonPageDefinitions {
     public void teardown() {
         // Keep browser open if needed for debugging, otherwise use driver.quit()
         // if (driver != null) driver.quit();
+    }
+    
+    @AfterStep
+    public void add_screenshot(Scenario scenario) {
+        // validate if driver is initialized before taking screenshot
+        if (driver != null) {
+            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            // Attach the screenshot to the Cucumber report
+            scenario.attach(screenshot, "image/png", "image_at_step_" + scenario.getLine());
+        }
     }
 }
