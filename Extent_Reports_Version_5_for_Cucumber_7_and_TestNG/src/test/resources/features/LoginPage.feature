@@ -1,3 +1,5 @@
+Feature: Login Functionality
+
 Background: 
     Given User is on HRMLogin page "https://opensource-demo.orangehrmlive.com/"
   
