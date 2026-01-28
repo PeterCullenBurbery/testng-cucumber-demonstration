@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Cucumber_TestNG_Demo_Amazon_with_working_screenshots_2026_001_027</name>
+	<name>Extent_Reports_version_4_with_Selenium_and_TestNG</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -22,7 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1769628124538</id>
+			<id>1769530400795</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
