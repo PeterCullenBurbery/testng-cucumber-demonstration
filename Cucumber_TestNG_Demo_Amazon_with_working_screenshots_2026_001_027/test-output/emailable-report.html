@@ -9,59 +9,10 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">267</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">19,671</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.example.runner.CucumberRunnerTests</td><td><a href="#m0">setUpClass</a></td><td rowspan="1">1769631856866</td><td rowspan="1">224</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.example.runner.CucumberRunnerTests</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1769632002151</td><td rowspan="1">13619</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.example.runner.CucumberRunnerTests#setUpClass</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>org.testng.TestRunner@42bc14c1</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">io.cucumber.core.exception.CucumberException: java.lang.ExceptionInInitializerError
-	at io.cucumber.core.plugin.PluginFactory.newInstance(PluginFactory.java:120)
-	at io.cucumber.core.plugin.PluginFactory.instantiate(PluginFactory.java:99)
-	at io.cucumber.core.plugin.PluginFactory.create(PluginFactory.java:63)
-	at io.cucumber.core.plugin.Plugins.createPlugins(Plugins.java:32)
-	at io.cucumber.core.plugin.Plugins.&lt;init&gt;(Plugins.java:25)
-	at io.cucumber.testng.TestNGCucumberRunner.&lt;init&gt;(TestNGCucumberRunner.java:111)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.setUpClass(AbstractTestNGCucumberTests.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.ExceptionInInitializerError
-	at com.aventstack.extentreports.service.ExtentService.getInstance(ExtentService.java:42)
-	at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.&lt;init&gt;(ExtentCucumberAdapter.java:142)
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at io.cucumber.core.plugin.PluginFactory.newInstance(PluginFactory.java:116)
-	... 30 more
-Caused by: java.lang.IllegalArgumentException: Too many pattern letters: d
-	at java.base/java.time.format.DateTimeFormatterBuilder.parseField(DateTimeFormatterBuilder.java:2156)
-	at java.base/java.time.format.DateTimeFormatterBuilder.parsePattern(DateTimeFormatterBuilder.java:1940)
-	at java.base/java.time.format.DateTimeFormatterBuilder.appendPattern(DateTimeFormatterBuilder.java:1908)
-	at java.base/java.time.format.DateTimeFormatter.ofPattern(DateTimeFormatter.java:569)
-	at com.aventstack.extentreports.service.ExtentService$ExtentReportsLoader.getBaseFolderName(ExtentService.java:288)
-	at com.aventstack.extentreports.service.ExtentService$ExtentReportsLoader.configureScreenshotProperties(ExtentService.java:309)
-	at com.aventstack.extentreports.service.ExtentService$ExtentReportsLoader.&lt;clinit&gt;(ExtentService.java:186)
-	... 36 more
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.example.runner.CucumberRunnerTests#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Search and add item to cart&quot;</td><td>&quot;Amazon Shopping Cart&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
