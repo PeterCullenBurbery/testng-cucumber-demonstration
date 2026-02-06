@@ -83,38 +83,31 @@ public class AmazonPageDefinitions {
         add_button.click();
     }
 
-    @Then("User should be able to navigate to the cart page")
-    public void verify_cart_navigation() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout_seconds));
-
-        // 1. Handle the "Protection Plan / Add to order" drawer
+    @When("User dismisses the protection plan if offered")
+    public void dismiss_protection_plan() {
         try {
-            // Look for the "No Thanks" button that appears in the side-sheet
-            // We use a short 3-5 second wait so we don't stall if it's NOT there
+            // Shorter wait because this won't always appear
+            WebDriverWait short_wait = new WebDriverWait(driver, Duration.ofSeconds(5));
             By no_thanks_selector = By.id("attachSiNoCoverage");
-            WebElement no_thanks_btn = new WebDriverWait(driver, Duration.ofSeconds(5))
-                    .until(ExpectedConditions.elementToBeClickable(no_thanks_selector));
+            WebElement no_thanks_btn = short_wait.until(ExpectedConditions.elementToBeClickable(no_thanks_selector));
             no_thanks_btn.click();
         } catch (TimeoutException ignored) {
-            // If the pop-up didn't appear, that's fine! Just move on.
+            // Plan didn't show up, which is fine
         }
+    }
 
-        // 2. Click the Cart button
-        // We'll use the same selector, but we use Javascript to bypass any remaining
-        // overlays
-        By go_to_cart_selector = By.cssSelector("#sw-gtc, #attach-sidesheet-view-cart-button, [href*='/cart']");
-        WebElement go_to_cart_btn = wait.until(ExpectedConditions.elementToBeClickable(go_to_cart_selector));
+    @Then("User should see the item in the shopping cart")
+    public void verify_item_in_cart() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout_seconds));
 
-        // Javascript click is more "aggressive" and ignores being obscured by other
-        // elements
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", go_to_cart_btn);
+        // Go to the actual cart page
+        driver.get("https://www.amazon.com/gp/cart/view.html");
 
-        // 3. Validation remains the same
-        boolean is_at_cart = wait.until(ExpectedConditions.or(
-                ExpectedConditions.titleContains("Shopping Cart"),
-                ExpectedConditions.urlContains("/cart")));
+        // Check that the "empty" message is NOT visible
+        boolean is_empty = driver.findElements(By.xpath("//h1[contains(text(),'Your Amazon Cart is empty')]"))
+                .size() > 0;
 
-        Assert.assertTrue(is_at_cart, "Failed to navigate to the shopping cart page.");
+        Assert.assertFalse(is_empty, "The cart is empty, the item was not added successfully!");
     }
 
     @After
