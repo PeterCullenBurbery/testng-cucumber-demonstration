@@ -93,16 +93,18 @@ public class AmazonPageDefinitions {
 
     @When("User dismisses the protection plan if offered")
     public void dismiss_protection_plan() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout_seconds));
         try {
-            WebDriverWait short_wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            // Target the "No Thanks" button
             By no_thanks_selector = By.id("attachSiNoCoverage");
-            WebElement no_thanks_btn = short_wait.until(ExpectedConditions.elementToBeClickable(no_thanks_selector));
+            WebElement no_thanks_btn = wait.until(ExpectedConditions.elementToBeClickable(no_thanks_selector));
             no_thanks_btn.click();
 
-            // Wait for the overlay to disappear so the screenshot shows a clean page
-            short_wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("attach-warranty-header")));
+            // CRITICAL: Wait for the entire side-sheet container to vanish
+            // This ensures the next screenshot is of the actual confirmation page
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("attach-sidesheet-content")));
         } catch (TimeoutException ignored) {
-            // Plan didn't show up
+            // Plan didn't show up, which is fine for organic results
         }
     }
 
