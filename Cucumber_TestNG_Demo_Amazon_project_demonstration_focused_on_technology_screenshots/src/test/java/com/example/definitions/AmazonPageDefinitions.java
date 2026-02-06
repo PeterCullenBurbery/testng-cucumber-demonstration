@@ -92,13 +92,15 @@ public class AmazonPageDefinitions {
     @When("User dismisses the protection plan if offered")
     public void dismiss_protection_plan() {
         try {
-            // Shorter wait because this won't always appear
             WebDriverWait short_wait = new WebDriverWait(driver, Duration.ofSeconds(5));
             By no_thanks_selector = By.id("attachSiNoCoverage");
             WebElement no_thanks_btn = short_wait.until(ExpectedConditions.elementToBeClickable(no_thanks_selector));
             no_thanks_btn.click();
+
+            // Wait for the overlay to disappear so the screenshot shows a clean page
+            short_wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("attach-warranty-header")));
         } catch (TimeoutException ignored) {
-            // Plan didn't show up, which is fine
+            // Plan didn't show up
         }
     }
 
