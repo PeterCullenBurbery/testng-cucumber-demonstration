@@ -82,19 +82,13 @@ public class AmazonPageDefinitions {
         WebElement add_button = wait.until(ExpectedConditions.elementToBeClickable(By.id("add-to-cart-button")));
         add_button.click();
 
-        // Use a shorter, optional wait here.
-        // We want to see if a side-sheet appears for the screenshot,
-        // but we don't want to crash if it doesn't.
-        try {
-            new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.or(
-                    ExpectedConditions.visibilityOfElementLocated(By.id("attach-sidesheet-content")),
-                    ExpectedConditions.visibilityOfElementLocated(By.id("NATC_SMART_WAGON_CONF_MSG_SUCCESS")),
-                    ExpectedConditions.visibilityOfElementLocated(By.id("attach-warranty-header"))));
-        } catch (TimeoutException ignored) {
-            // If nothing popped up in 5 seconds, the screenshot will just be the product
-            // page.
-            // That's better than a test failure.
-        }
+        // Wait for ANY confirmation element to be visible so the screenshot is
+        // meaningful
+        // We look for the side-sheet, the warranty header, or the success message
+        wait.until(ExpectedConditions.or(
+                ExpectedConditions.visibilityOfElementLocated(By.id("attach-sidesheet-content")),
+                ExpectedConditions.visibilityOfElementLocated(By.id("attach-warranty-header")),
+                ExpectedConditions.visibilityOfElementLocated(By.id("NATC_SMART_WAGON_CONF_MSG_SUCCESS"))));
     }
 
     @When("User dismisses the protection plan if offered")
