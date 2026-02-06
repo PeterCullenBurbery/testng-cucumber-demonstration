@@ -10,5 +10,4 @@ Feature: Amazon Shopping Cart Suite
 
     Examples:
       | product_name                               |
-      | "Fakanhui satin pants for women"           |
-      | "EVALESS pleated v neck blouse light pink" |
+      | "Victorinox Huntsman Swiss Army Knife, 15 Functions, Swiss Made Pocket Knife with Large Blade, Screwdriver, Scissors and Wood Saw - Red"           |
