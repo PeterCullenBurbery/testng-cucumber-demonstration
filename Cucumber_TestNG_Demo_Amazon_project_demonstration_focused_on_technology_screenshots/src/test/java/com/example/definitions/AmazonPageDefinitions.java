@@ -13,8 +13,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 
 import java.time.Duration;
 
@@ -89,12 +87,29 @@ public class AmazonPageDefinitions {
     public void verify_cart_navigation() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout_seconds));
 
-        // Multi-locator strategy for "Go to Cart" button as seen in your original
-        // script
+        // 1. Handle the "Protection Plan / Add to order" drawer
+        try {
+            // Look for the "No Thanks" button that appears in the side-sheet
+            // We use a short 3-5 second wait so we don't stall if it's NOT there
+            By no_thanks_selector = By.id("attachSiNoCoverage");
+            WebElement no_thanks_btn = new WebDriverWait(driver, Duration.ofSeconds(5))
+                    .until(ExpectedConditions.elementToBeClickable(no_thanks_selector));
+            no_thanks_btn.click();
+        } catch (TimeoutException ignored) {
+            // If the pop-up didn't appear, that's fine! Just move on.
+        }
+
+        // 2. Click the Cart button
+        // We'll use the same selector, but we use Javascript to bypass any remaining
+        // overlays
         By go_to_cart_selector = By.cssSelector("#sw-gtc, #attach-sidesheet-view-cart-button, [href*='/cart']");
         WebElement go_to_cart_btn = wait.until(ExpectedConditions.elementToBeClickable(go_to_cart_selector));
-        go_to_cart_btn.click();
 
+        // Javascript click is more "aggressive" and ignores being obscured by other
+        // elements
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", go_to_cart_btn);
+
+        // 3. Validation remains the same
         boolean is_at_cart = wait.until(ExpectedConditions.or(
                 ExpectedConditions.titleContains("Shopping Cart"),
                 ExpectedConditions.urlContains("/cart")));
@@ -107,7 +122,7 @@ public class AmazonPageDefinitions {
         // Keep browser open if needed for debugging, otherwise use driver.quit()
         // if (driver != null) driver.quit();
     }
-    
+
     @AfterStep
     public void add_screenshot(Scenario scenario) {
         // validate if driver is initialized before taking screenshot
