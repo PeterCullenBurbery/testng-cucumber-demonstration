@@ -111,15 +111,18 @@ public class AmazonPageDefinitions {
     @Then("User should see the item in the shopping cart")
     public void verify_item_in_cart() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout_seconds));
+
+        // Navigate to the cart
         driver.get("https://www.amazon.com/gp/cart/view.html");
 
-        // Wait for the specific cart container to load
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("sc-active-cart")));
+        // Wait for the cart items list to be present (this proves the page loaded)
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("sc-active-cart")));
 
+        // Check if the "empty" header exists
         boolean is_empty = driver.findElements(By.xpath("//h1[contains(text(),'Your Amazon Cart is empty')]"))
                 .size() > 0;
 
-        Assert.assertFalse(is_empty, "The cart is empty, the item was not added successfully!");
+        Assert.assertFalse(is_empty, "The cart is empty! The item was not added successfully.");
     }
 
     @After
