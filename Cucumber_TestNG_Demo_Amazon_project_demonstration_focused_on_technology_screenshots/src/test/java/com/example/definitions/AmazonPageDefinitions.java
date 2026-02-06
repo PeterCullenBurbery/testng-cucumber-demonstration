@@ -81,6 +81,12 @@ public class AmazonPageDefinitions {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout_seconds));
         WebElement add_button = wait.until(ExpectedConditions.elementToBeClickable(By.id("add-to-cart-button")));
         add_button.click();
+
+        // Wait for the side-sheet or the confirmation to start appearing
+        // so the screenshot at the end of this step isn't just the product page.
+        wait.until(ExpectedConditions.or(
+                ExpectedConditions.visibilityOfElementLocated(By.id("attach-sidesheet-content")),
+                ExpectedConditions.visibilityOfElementLocated(By.id("NATC_SMART_WAGON_CONF_MSG_SUCCESS"))));
     }
 
     @When("User dismisses the protection plan if offered")
