@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Feb 06 14:24:08 EST 2026</td>
+<td>Started on:</td><td>Fri Feb 06 14:29:29 EST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>78 seconds (78394 ms)</td>
+<tr><td>Total time:</td><td>43 seconds (43146 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -77,12 +77,48 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.example.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.example.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search and add various items to cart", "Amazon Shopping Cart Suite"</td>
-<td></td>
-<td>24</td>
-<td>com.example.runner.CucumberRunnerTests@2a4fb17b</td></tr>
-<tr>
-<td title='com.example.runner.CucumberRunnerTests.runScenario()'><b>runScenario</b><br>Test class: com.example.runner.CucumberRunnerTests<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search and add various items to cart", "Amazon Shopping Cart Suite"</td>
-<td></td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;/gp/cart/view.html?ref_=nav_cart&quot; aria-label=&quot;0 items in cart&quot; class=&quot;nav-a nav-a-2 nav-progressive-attribute&quot; id=&quot;nav-cart&quot;&gt;...&lt;/a&gt; is not clickable at point (3783, 30). Other element would receive the click: &lt;h3 id=&quot;attach-warranty-header&quot; class=&quot;a-spacing-base&quot;&gt;...&lt;/h3&gt;
+  (Session info: chrome=144.0.7559.133)
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3d7353d7a4dd699fbed80bfd6376e10b, clickElement {id=f.D4115FC38C7A9320517CD37B7A65FBBE.d.E91AB55234777DF92497624807A78460.e.466}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\peter\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65227}, goog:processID: 26360, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65227/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3d7353d7a4dd699fbed80bfd6376e10b)] -&gt; css selector: #sw-gtc, #attach-sidesheet-view-cart-button, [href*=&apos;/cart&apos;]]
+Session ID: 3d7353d7a4dd699fbed80bfd6376e10b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.example.definitions.AmazonPageDefinitions.verify_cart_navigation(AmazonPageDefinitions.java:96)
+	at ✽.User should be able to navigate to the cart page(file:///C:/GitHub-repositories/testng-cucumber-demonstration/Project_001_Cucumber_TestNG_Demo_focused_on_knife_and_other_stuff_2026_002_006/src/test/resources/features/AmazonCart.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace414765427", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace414765427'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;/gp/cart/view.html?ref_=nav_cart&quot; aria-label=&quot;0 items in cart&quot; class=&quot;nav-a nav-a-2 nav-progressive-attribute&quot; id=&quot;nav-cart&quot;&gt;...&lt;/a&gt; is not clickable at point (3783, 30). Other element would receive the click: &lt;h3 id=&quot;attach-warranty-header&quot; class=&quot;a-spacing-base&quot;&gt;...&lt;/h3&gt;
+  (Session info: chrome=144.0.7559.133)
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3d7353d7a4dd699fbed80bfd6376e10b, clickElement {id=f.D4115FC38C7A9320517CD37B7A65FBBE.d.E91AB55234777DF92497624807A78460.e.466}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\peter\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65227}, goog:processID: 26360, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65227/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3d7353d7a4dd699fbed80bfd6376e10b)] -&gt; css selector: #sw-gtc, #attach-sidesheet-view-cart-button, [href*=&apos;/cart&apos;]]
+Session ID: 3d7353d7a4dd699fbed80bfd6376e10b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at com.example.definitions.AmazonPageDefinitions.verify_cart_navigation(AmazonPageDefinitions.java:96)
+	at ✽.User should be able to navigate to the cart page(file:///C:/GitHub-repositories/testng-cucumber-demonstration/Project_001_Cucumber_TestNG_Demo_focused_on_knife_and_other_stuff_2026_002_006/src/test/resources/features/AmazonCart.feature:9)
+</pre></div></td>
 <td>24</td>
 <td>com.example.runner.CucumberRunnerTests@2a4fb17b</td></tr>
 </table><p>
